@@ -9,7 +9,7 @@ function ProfilePage() {
   const [bookings, setBookings] = useState([]);
   const { user } = useContext(AuthContext);
 
-  const getAllBookings = async () => {
+  const getAllBookings = async (user) => {
     try {
       const response = await axios.get(`${API_URL}/api/bookings/${user._id}`);
       setBookings(response.data);
@@ -20,7 +20,7 @@ function ProfilePage() {
 
   useEffect(() => {
     getAllBookings();
-  }, []);
+  }, [user]);
 
   return (
     <div className="main">

@@ -5,7 +5,6 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import Button from "react-bootstrap/Button";
-import authService from "../../services/auth.service";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");

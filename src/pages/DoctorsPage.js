@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Icofont from "react-icofont";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 const API_URL = "http://localhost:5005";
 
 function DoctorsPage() {

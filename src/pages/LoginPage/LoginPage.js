@@ -4,8 +4,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
-
-import authService from "../../services/auth.service";
+import Button from "react-bootstrap/Button";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -47,22 +46,39 @@ function LoginPage(props) {
   };
 
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
+    <div className="main">
+      <div className="LoginPage">
+        <h1>Login</h1>
 
-      <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input type="text" name="email" value={email} onChange={handleEmail} />
+        <form onSubmit={handleLoginSubmit}>
+          <label>Email:</label>
+          <input
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleEmail}
+          />
 
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handlePassword}
+          />
 
-        <button type="submit">Login</button>
-      </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+          <Button
+            style={{ marginTop: "20px", marginBottom: "10px" }}
+            type="submit"
+          >
+            Login
+          </Button>
+        </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Don't have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
+        <p>Don't have an account yet?</p>
+        <Link to={"/signup"}> Sign Up</Link>
+      </div>
     </div>
   );
 }

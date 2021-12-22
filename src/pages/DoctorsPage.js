@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Icofont from "react-icofont";
 import Col from "react-bootstrap/Col";
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
 
 function DoctorsPage() {
   const [doctors, setDoctors] = useState([]);

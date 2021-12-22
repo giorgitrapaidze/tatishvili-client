@@ -10,7 +10,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Icofont from "react-icofont";
 
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
 
 function DoctorsDetails() {
   const [doctor, setDoctor] = useState(null);

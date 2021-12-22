@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
 
 function SignupPage(props) {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ function SignupPage(props) {
       const requestBody = { email, password, name };
 
       const authToken = localStorage.getItem("authToken");
-      await axios.post("http://localhost:5005/auth/signup", requestBody, {
+      await axios.post(`${API_URL}/auth/signup`, requestBody, {
         headers: { Authorization: `Bearer ${authToken}` },
       });
 

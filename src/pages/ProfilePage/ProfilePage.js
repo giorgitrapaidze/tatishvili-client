@@ -3,7 +3,7 @@ import { AuthContext } from "../../context/auth.context";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
 
 function ProfilePage() {
   const [bookings, setBookings] = useState([]);

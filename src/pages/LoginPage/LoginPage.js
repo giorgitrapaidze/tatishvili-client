@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import Button from "react-bootstrap/Button";
-const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+const API_URL = process.env.REACT_APP_SERVER_URL;
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");

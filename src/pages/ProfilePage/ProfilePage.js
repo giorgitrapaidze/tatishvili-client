@@ -82,7 +82,11 @@ function ProfilePage() {
         {visibility ? "Hide Edit" : "Edit Profile"}
       </Button>
       {visibility && (
-        <form onSubmit={handleSubmit}>
+        <form
+          className="d-flex flex-column align-items-center"
+          style={{ color: "white" }}
+          onSubmit={handleSubmit}
+        >
           <label>Username</label>
           <input
             required

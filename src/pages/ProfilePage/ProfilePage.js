@@ -63,7 +63,6 @@ function ProfilePage() {
       logInUser(token);
 
       navigate("/profile");
-      console.log(response);
       setUsername(response.data.name);
 
       // Reset the state

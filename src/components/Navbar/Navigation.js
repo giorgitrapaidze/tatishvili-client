@@ -17,7 +17,7 @@ function Navigation() {
           <Link to="/">
             <img className="logo" src="../images/tatishvililogo.png" alt="" />
           </Link>
-          <div className="flex">
+          <div className="d-flex align-items-center">
             {user && (
               <div
                 className="profile-img-wrapper"

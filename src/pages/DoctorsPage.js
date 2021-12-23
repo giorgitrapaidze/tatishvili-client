@@ -17,7 +17,6 @@ function DoctorsPage() {
   const getAllDoctors = async () => {
     try {
       const response = await axios.get(`${API_URL}/api/doctors`);
-      console.log(response.data);
       setDoctors(response.data);
       setAllDoctors(response.data);
     } catch (error) {

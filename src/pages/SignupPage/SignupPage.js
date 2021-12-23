@@ -57,6 +57,7 @@ function SignupPage(props) {
           <input
             type="password"
             name="password"
+            autocomplete="new-password"
             value={password}
             onChange={handlePassword}
           />

@@ -25,7 +25,6 @@ function DoctorsDetails() {
     try {
       const response = await axios.get(`${API_URL}/api/doctor/${doctorId}`);
       setDoctor(response.data);
-      console.log(response.data);
       setDoctorName(response.data.name);
     } catch (error) {
       console.log(error);
@@ -51,7 +50,6 @@ function DoctorsDetails() {
       e.preventDefault();
 
       const requestBody = { user, doctorname, time };
-      console.log(requestBody);
       const response = await axios.post(`${API_URL}/api/booking`, requestBody);
 
       // Reset the state

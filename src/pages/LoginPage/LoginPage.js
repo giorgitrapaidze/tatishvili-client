@@ -62,6 +62,7 @@ function LoginPage(props) {
           <input
             type="password"
             name="password"
+            autocomplete="current-password"
             value={password}
             onChange={handlePassword}
           />
